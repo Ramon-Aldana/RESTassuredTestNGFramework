@@ -3,6 +3,8 @@ package api.utilities;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -19,9 +21,14 @@ public class ExtentITestListenerAdapter implements ITestListener {
 	public ExtentSparkReporter sparkReporter;
 	public ExtentReports extent;
 	public ExtentTest test;
+	
+	Logger logger;
+	
 	String repName;
 
 	public void onStart(ITestContext testContext) {
+		logger = LogManager.getLogger(this.getClass());
+		
 		String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 		repName = "Test-Report" + timestamp + ".html";
 		
@@ -47,7 +54,11 @@ public class ExtentITestListenerAdapter implements ITestListener {
 
 	@Override
 	public synchronized void onTestStart(ITestResult result) {
-
+		String logline = "----------------- START: " + result.getName() + "---------------------";
+		logger.info( logline);
+		System.out.println(logline);
+		System.out.flush();
+		
 	}
 
 	@Override

@@ -4,6 +4,7 @@ package api.test;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import com.github.javafaker.Faker;
@@ -11,6 +12,10 @@ import com.github.javafaker.Faker;
 import api.endpoints.*;
 import api.payloads.User;
 import api.payloads.UserData;
+import api.utilities.JavaUtils;
+
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.lessThan;
 
 
 public class UserTests {
@@ -29,16 +34,18 @@ public class UserTests {
 	@Test(priority=1)
 	public void testCreateUser()
 	{
-		logger.info("*********** Creating User ******************");
 		UserEndPoints.createUser(user).andReturn()
 		.then().statusCode(200).and().log().body();
-		logger.info("*********** Created User ******************");
+
 	}
 	
 	@Test(priority=2)
 	public void testGetUserByName() {
 		UserEndPoints.readUser(this.user.getUsername())
-		.then().statusCode(200).and().log().body();
+		.then()
+		.statusCode(200)
+		.and().time(lessThan(10L))
+		.log().body();
 	}
 	
 	@Test(priority=3)
