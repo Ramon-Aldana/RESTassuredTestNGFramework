@@ -12,9 +12,7 @@ import com.github.javafaker.Faker;
 import api.endpoints.*;
 import api.payloads.User;
 import api.payloads.UserData;
-import api.utilities.JavaUtils;
 
-import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.lessThan;
 
 
