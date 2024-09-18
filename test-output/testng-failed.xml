@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="api.test.UserDataDrivenTests">
+      <class name="api.test.UserTests">
         <methods>
-          <include name="testCreateUsers" invocation-numbers="0 1"/>
+          <include name="setup"/>
+          <include name="testDeleteUserByName"/>
+          <include name="testGetUserByName"/>
+          <include name="testUpdateUserByName"/>
+          <include name="testCreateUser"/>
         </methods>
-      </class> <!-- api.test.UserDataDrivenTests -->
+      </class> <!-- api.test.UserTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

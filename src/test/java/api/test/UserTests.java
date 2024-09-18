@@ -10,6 +10,7 @@ import com.github.javafaker.Faker;
 
 import api.endpoints.*;
 import api.payloads.User;
+import api.payloads.UserData;
 
 
 public class UserTests {
@@ -20,27 +21,11 @@ public class UserTests {
 	
 	@BeforeClass
 	public void setup() {
-        faker = new Faker();
-        user = new User();
-        
-        user.setId(faker.number().randomDigitNotZero());
-        user.setUsername(faker.name().username());
-        udpateUserDetails();
-
+        user = UserData.newUser();
         //Logs
         logger = LogManager.getLogger(this.getClass());
         }
 
-	public void udpateUserDetails() {
-        user.setFirstName(faker.name().firstName());
-        user.setLastName(faker.name().lastName());
-        user.setEmail(faker.internet().emailAddress());
-        user.setPassword(faker.internet().password(8, 16));
-        user.setPhone(faker.phoneNumber().cellPhone());
-        user.setUserStatus(0); // You can modify the logic for userStatus if needed
-	}
-	
-	
 	@Test(priority=1)
 	public void testCreateUser()
 	{
@@ -58,14 +43,14 @@ public class UserTests {
 	
 	@Test(priority=3)
 	public void testUpdateUserByName() {
-		udpateUserDetails();
+		UserData.udpateUserDetails(user);
 		UserEndPoints.updateUser(user.getUsername(), user)
 		.then().statusCode(200).and().log().body();
 	}
 	
 	@Test(priority=4)
 	public void testDeleteUserByName() {
-		udpateUserDetails();
+		UserData.udpateUserDetails(user);
 		UserEndPoints.deleteUser(user.getUsername())
 		.then().statusCode(200).and().log().body();
 		
