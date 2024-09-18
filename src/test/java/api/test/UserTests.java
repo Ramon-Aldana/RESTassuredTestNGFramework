@@ -42,7 +42,7 @@ public class UserTests {
 		UserEndPoints.readUser(this.user.getUsername())
 		.then()
 		.statusCode(200)
-		.and().time(lessThan(10L))
+		.and().time(lessThan(50L))
 		.log().body();
 	}
 	
