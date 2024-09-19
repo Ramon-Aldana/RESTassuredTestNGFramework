@@ -26,16 +26,16 @@ public class BodyGenerator {
 		student.put("email", "johndoe@example.com");
 
 		// Create a list of courses for student
-		List<Map<String, Object>> courses = new ArrayList<>();
+		ArrayList<HashMap<String, Object>> courses = new ArrayList<HashMap<String, Object>>();
 
-		Map<String, Object> course1 = new HashMap<String, Object>();
+		HashMap<String, Object> course1 = new HashMap<String, Object>();
 		course1.put("course_id", 101);
 		course1.put("course_name", "Introduction to Computer Science");
 		course1.put("instructor", "Dr. Smith");
 		course1.put("credits", 3);
 		courses.add(course1);
 
-		Map<String, Object> course2 = new HashMap<>();
+		HashMap<String, Object> course2 = new HashMap<String, Object>();
 		course2.put("course_id", 102);
 		course2.put("course_name", "Calculus I");
 		course2.put("instructor", "Prof. Johnson");

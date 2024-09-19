@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-19T13:42:45 EDT" name="Default suite" finished-at="2024-09-19T13:42:50 EDT" duration-ms="4397">
+  <suite started-at="2024-09-19T14:40:32 EDT" name="Suite" finished-at="2024-09-19T14:40:36 EDT" duration-ms="4379">
     <groups>
     </groups>
-    <test started-at="2024-09-19T13:42:45 EDT" name="Default test" finished-at="2024-09-19T13:42:50 EDT" duration-ms="4397">
+    <test started-at="2024-09-19T14:40:32 EDT" name="Test" finished-at="2024-09-19T14:40:36 EDT" duration-ms="4379">
       <class name="httpmethods.HTTPRequests">
-        <test-method signature="getUsers()[pri:0, instance:httpmethods.HTTPRequests@6e9175d8]" started-at="2024-09-19T13:42:45 EDT" name="getUsers" finished-at="2024-09-19T13:42:48 EDT" duration-ms="2628" status="PASS">
+        <test-method signature="getUsers()[pri:0, instance:httpmethods.HTTPRequests@6e9175d8]" started-at="2024-09-19T14:40:32 EDT" name="getUsers" finished-at="2024-09-19T14:40:35 EDT" duration-ms="2564" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getUsers -->
-        <test-method signature="createOrphanUser()[pri:1, instance:httpmethods.HTTPRequests@6e9175d8]" started-at="2024-09-19T13:42:48 EDT" name="createOrphanUser" finished-at="2024-09-19T13:42:48 EDT" duration-ms="650" status="PASS">
+        <test-method signature="createOrphanUser()[pri:1, instance:httpmethods.HTTPRequests@6e9175d8]" started-at="2024-09-19T14:40:35 EDT" name="createOrphanUser" finished-at="2024-09-19T14:40:35 EDT" duration-ms="688" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createOrphanUser -->
-        <test-method signature="createAdoptedUser()[pri:2, instance:httpmethods.HTTPRequests@6e9175d8]" started-at="2024-09-19T13:42:48 EDT" name="createAdoptedUser" finished-at="2024-09-19T13:42:49 EDT" duration-ms="397" status="PASS">
+        <test-method signature="createAdoptedUser()[pri:2, instance:httpmethods.HTTPRequests@6e9175d8]" started-at="2024-09-19T14:40:35 EDT" name="createAdoptedUser" finished-at="2024-09-19T14:40:36 EDT" duration-ms="361" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createAdoptedUser -->
-        <test-method signature="updateAdoptedUser()[pri:3, instance:httpmethods.HTTPRequests@6e9175d8]" started-at="2024-09-19T13:42:49 EDT" name="updateAdoptedUser" finished-at="2024-09-19T13:42:49 EDT" depends-on-methods="httpmethods.HTTPRequests.createAdoptedUser" duration-ms="320" status="PASS">
+        <test-method signature="updateAdoptedUser()[pri:3, instance:httpmethods.HTTPRequests@6e9175d8]" started-at="2024-09-19T14:40:36 EDT" name="updateAdoptedUser" finished-at="2024-09-19T14:40:36 EDT" depends-on-methods="httpmethods.HTTPRequests.createAdoptedUser" duration-ms="350" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateAdoptedUser -->
-        <test-method signature="deleteAdoptedUser()[pri:4, instance:httpmethods.HTTPRequests@6e9175d8]" started-at="2024-09-19T13:42:49 EDT" name="deleteAdoptedUser" finished-at="2024-09-19T13:42:50 EDT" depends-on-methods="httpmethods.HTTPRequests.updateAdoptedUser" duration-ms="324" status="PASS">
+        <test-method signature="deleteAdoptedUser()[pri:4, instance:httpmethods.HTTPRequests@6e9175d8]" started-at="2024-09-19T14:40:36 EDT" name="deleteAdoptedUser" finished-at="2024-09-19T14:40:36 EDT" depends-on-methods="httpmethods.HTTPRequests.updateAdoptedUser" duration-ms="354" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAdoptedUser -->
       </class> <!-- httpmethods.HTTPRequests -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
