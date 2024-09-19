@@ -1,0 +1,19 @@
+    {
+      "name": "John Doe",
+      "age": 20,
+      "email": "johndoe@example.com",
+      "courses": [
+        {
+          "instructor": "Dr. Smith",
+          "credits": 3,
+          "course_id": 101,
+          "course_name": "Introduction to Computer Science"
+        },
+        {
+          "instructor": "Prof. Johnson",
+          "credits": 4,
+          "course_id": 102,
+          "course_name": "Calculus I"
+        }
+      ]
+    }
