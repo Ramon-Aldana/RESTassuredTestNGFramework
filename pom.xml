@@ -63,7 +63,7 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>7.10.2</version>
+			<version>6.11</version> <!-- required version for container FROM maven:3.6.3-jdk-8 -->
 			<scope>test</scope>
 		</dependency>
 
@@ -95,7 +95,7 @@
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
-			<version>5.1.2</version>
+			<version>4.1.1</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.aventstack/klov-reporter -->

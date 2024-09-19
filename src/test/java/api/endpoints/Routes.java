@@ -4,7 +4,9 @@ import java.util.ResourceBundle;
 
 public class Routes {
 
-	public static String baseUrl = "https://petstore.swagger.io/v2";
+
+	//public static String baseUrl = "https://petstore.swagger.io/v2";
+	public static String baseUrl = "https://petstore3.swagger.io/api/v3";
 	
 	//user module
 //	public static String post_url = baseUrl + "/user";

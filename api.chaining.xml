@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="PetstoreTestAPIFramework">
+	<test thread-count="5" name="api.chaining">
+		<classes>
+			<class name="api.chaining.CreateUser" />
+			<class name="api.chaining.GetUser" />
+
+		</classes>
+	</test> <!--
+	api.chaining -->
+</suite> <!--
+PetstoreTestAPIFramework -->

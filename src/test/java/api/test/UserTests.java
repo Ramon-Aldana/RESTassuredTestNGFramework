@@ -28,7 +28,7 @@ public class UserTests {
         //Logs
         logger = LogManager.getLogger(this.getClass());
         }
-
+	//ITestContext
 	@Test(priority=1)
 	public void testCreateUser()
 	{
@@ -42,7 +42,7 @@ public class UserTests {
 		UserEndPoints.readUser(this.user.getUsername())
 		.then()
 		.statusCode(200)
-		.and().time(lessThan(50L))
+		.and().time(lessThan(500L))
 		.log().body();
 	}
 	

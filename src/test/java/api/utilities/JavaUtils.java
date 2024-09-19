@@ -16,14 +16,15 @@ public class JavaUtils {
 	* @see         		StackWalker
 	*/
 
-	public static String whoIsCalling() {
-		Optional<String> methodName;
-		
-	    StackWalker walker = StackWalker.getInstance();
-	    methodName = walker.walk(frames -> frames
-	      .skip(1).findFirst()
-	      .map(StackWalker.StackFrame::getMethodName));
-
-	    return methodName.get();
-	}
+	// Currently not supported in 1.8
+//	public static String whoIsCalling() {
+//		Optional<String> methodName;
+//		
+//	    StackWalker walker = StackWalker.getInstance();
+//	    methodName = walker.walk(frames -> frames
+//	      .skip(1).findFirst()
+//	      .map(StackWalker.StackFrame::getMethodName));
+//
+//	    return methodName.get();
+//	}
 }

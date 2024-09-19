@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Authentications.DoorMan">
+      <class name="api.test.UserTests">
         <methods>
-          <include name="testAPIKeyAuthentication"/>
+          <include name="setup"/>
+          <include name="testGetUserByName"/>
         </methods>
-      </class> <!-- Authentications.DoorMan -->
+      </class> <!-- api.test.UserTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

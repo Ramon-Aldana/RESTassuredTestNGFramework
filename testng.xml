@@ -5,13 +5,11 @@
 	<listeners>
 		<listener class-name="api.utilities.ExtentITestListenerAdapter"></listener>
 	</listeners>
-	<test thread-count="5" name="TestUser">
+	<test thread-count="1" name="TestUser">
 		<classes>
 			<class name="api.test.UserTests" />
-			<!-- <class name="api.test.UserDataDrivenTests"/> -->
 		</classes>
 	</test>
-	 <!--
-	TestUser -->
-</suite> <!--
-PetStore -->
+	
+</suite> 
+
