@@ -1,6 +1,10 @@
 package httpmethods;
 
 import org.testng.annotations.Test;
+
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 import java.util.HashMap;
@@ -54,15 +58,16 @@ public class HTTPRequests {
 		data.put("name", "ramon");
 		data.put("job","jobseeker");
 		
-		id = given()
+		Response response = given()
 				.headers("Test","createAdoptedUser")
 			.contentType("application/json")
 			.body(data)
 		.when()
-			.post("https://reqres.in/api/users")
-			.body().jsonPath().getInt("id");
-		
+			.post("https://reqres.in/api/users");
 			
+		JsonPath jsonPathEvaluator = response.jsonPath();
+		
+		id = Integer.parseInt(jsonPathEvaluator.get("id").toString());
 	}
 	
 	@Test (priority=3, dependsOnMethods = {"createAdoptedUser"})

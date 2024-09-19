@@ -9,4 +9,4 @@ WORKDIR /app
 # Execute command at creation of image
 RUN mvn clean compile
 # Command to be executed at start of container/instance-of-image
-CMD mvn test -Dsurefire.suiteXmlFiles=$suiteFile -e
+CMD ["mvn", "test", "-Dsurefire.suiteXmlFiles=$suiteFile", "-e"]

@@ -56,7 +56,7 @@ public class BodyGenerator {
 		student.put("email", "johndoe@example.com");
 
 		// Create a list of courses for student
-		List<JSONObject> courses = new ArrayList<>();
+		ArrayList<JSONObject> courses = new ArrayList<JSONObject>();
 
 		JSONObject course1 = new JSONObject();
 		course1.put("course_id", 101);
