@@ -5,9 +5,8 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,9 +20,9 @@
      -->
   </head>
 
-  <body>    <div class="top-banner-root">
+  <body>
+    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
-      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
@@ -189,7 +188,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;1&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
@@ -237,28 +236,28 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'getUsers')
 data.setCell(0, 2, 'httpmethods.HTTPRequests')
-data.setCell(0, 3, 2650);
+data.setCell(0, 3, 6893);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'createOrphanUser')
 data.setCell(1, 2, 'httpmethods.HTTPRequests')
-data.setCell(1, 3, 700);
+data.setCell(1, 3, 1350);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'createAdoptedUser')
 data.setCell(2, 2, 'httpmethods.HTTPRequests')
-data.setCell(2, 3, 369);
+data.setCell(2, 3, 382);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'updateAdoptedUser')
+data.setCell(3, 1, 'deleteAdoptedUser')
 data.setCell(3, 2, 'httpmethods.HTTPRequests')
-data.setCell(3, 3, 332);
+data.setCell(3, 3, 357);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'deleteAdoptedUser')
+data.setCell(4, 1, 'updateAdoptedUser')
 data.setCell(4, 2, 'httpmethods.HTTPRequests')
-data.setCell(4, 3, 314);
+data.setCell(4, 3, 330);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 9 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -291,24 +290,23 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">createOrphanUser</span>
-                <span class="method-start">2656 ms</span>
+                <span class="method-start">6916 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">createAdoptedUser</span>
-                <span class="method-start">3364 ms</span>
+                <span class="method-start">8269 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">updateAdoptedUser</span>
-                <span class="method-start">3736 ms</span>
+                <span class="method-start">8653 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">deleteAdoptedUser</span>
-                <span class="method-start">4071 ms</span>
+                <span class="method-start">8985 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
-<script type="text/javascript" src="testng-reports2.js"></script>
 </html>
