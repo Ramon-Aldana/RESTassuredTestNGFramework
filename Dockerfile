@@ -9,4 +9,5 @@ WORKDIR /app
 # Execute command at creation of image
 RUN mvn clean compile
 # Command to be executed at start of container/instance-of-image
+# Figure out how to use $suiteFile
 CMD ["mvn", "test", "-Dsurefire.suiteXmlFiles=testng.xml", "-e"]
