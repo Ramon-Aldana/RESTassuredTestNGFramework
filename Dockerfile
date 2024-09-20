@@ -10,4 +10,4 @@ WORKDIR /app
 RUN mvn clean compile
 # Command to be executed at start of container/instance-of-image
 # Figure out how to use $suiteFile
-CMD ["mvn", "test", "-Dsurefire.suiteXmlFiles=testng.xml", "-e"]
+CMD mvn test -Dsurefire.suiteXmlFiles=$suiteFile -e

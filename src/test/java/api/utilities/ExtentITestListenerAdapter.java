@@ -32,7 +32,9 @@ public class ExtentITestListenerAdapter implements ITestListener {
 		String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 		repName = "Test-Report" + timestamp + ".html";
 		
-		sparkReporter = new ExtentSparkReporter(".\\reports\\" + repName);
+
+		logInfo("REPORT TO: " + repName);
+		sparkReporter = new ExtentSparkReporter("reports\\" + repName);
 		
 		sparkReporter.config().setDocumentTitle("RestAssuredAutomationProject"); 
 		sparkReporter.config().setReportName("Pet Store Users API"); // name of the report
@@ -49,16 +51,14 @@ public class ExtentITestListenerAdapter implements ITestListener {
 
 	@Override
 	public synchronized void onFinish(ITestContext context) {
+		
+		logInfo("FLUSH : " + sparkReporter.getFilePath());
 		extent.flush();
 	}
 
 	@Override
 	public synchronized void onTestStart(ITestResult result) {
-		String logline = "----------------- START: " + result.getName() + "---------------------";
-		logger.info( logline);
-		System.out.println(logline);
-		System.out.flush();
-		
+		logInfo("START :" + result.getName());
 	}
 
 	@Override
@@ -88,4 +88,10 @@ public class ExtentITestListenerAdapter implements ITestListener {
 	public synchronized void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 	}
 
+	public void logInfo(String log) {
+		String logline = "----------------- " + log + "---------------------";
+		logger.info( logline);
+		System.out.println(logline);
+		System.out.flush();		
+	}
 }
