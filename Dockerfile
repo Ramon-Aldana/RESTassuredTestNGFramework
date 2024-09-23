@@ -1,7 +1,7 @@
 # Base image
 FROM maven:3.6.3-jdk-8
 # Argument with default value
-ARG suiteFile=testng.xml
+ARG suiteFile=testngxxxx.xml
 # Copy code from local to image
 COPY ./ /app
 # Specify working directory in image

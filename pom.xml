@@ -71,7 +71,20 @@
 			<version>1.0.2</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>4.1.1</version>
+		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.aventstack/klov-reporter -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>klov-reporter</artifactId>
+			<version>5.1.0</version>
+		</dependency>
+		
 	</dependencies>
 
 </project>
